@@ -1,0 +1,107 @@
+# ========================================
+# Tina SDK .gitignore
+# ========================================
+
+# ---- 编译输出 ----
+out/
+*.o
+*.ko
+*.mod.*
+*.o.*
+*.order
+*.symvers
+modules.builtin
+modules.order
+Module.symvers
+
+# ---- 内核编译产物 ----
+kernel/linux-4.9/output/
+kernel/linux-4.9/vmlinux
+kernel/linux-4.9/System.map
+kernel/linux-4.9/.version
+kernel/linux-4.9/arch/arm/boot/Image
+kernel/linux-4.9/arch/arm/boot/zImage
+kernel/linux-4.9/arch/arm/boot/uImage
+kernel/linux-4.9/arch/arm/boot/compressed/
+kernel/linux-4.9/arch/arm/boot/dts/*.dtb
+
+# ---- Repo 管理工具 ----
+.repo/
+
+# ---- 预编译工具链 (太大) ----
+prebuilt/
+
+# ---- OpenWrt/Buildroot 构建产物 ----
+openwrt/openwrt/bin/
+openwrt/openwrt/build_dir/
+openwrt/openwrt/dl/
+openwrt/openwrt/feeds/
+openwrt/openwrt/staging_dir/
+openwrt/openwrt/tmp/
+openwrt/openwrt/logs/
+openwrt/openwrt/.config
+openwrt/openwrt/.config.old
+openwrt/dl/
+buildroot/buildroot-201902/output/
+buildroot/buildroot-201902/dl/
+
+# ---- Brandy (U-Boot) 构建产物 ----
+brandy/brandy-2.0/u-boot-2018/*.bin
+brandy/brandy-2.0/u-boot-2018/*.elf
+brandy/brandy-2.0/u-boot-2018/*.map
+brandy/brandy-2.0/u-boot-2018/tools/
+
+# ---- 编译配置缓存 ----
+.buildconfig
+
+# ---- 临时文件 ----
+*~
+*.swp
+*.swo
+.#*
+*.bak
+*.orig
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.code-workspace
+
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+
+# ---- 压缩包 ----
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ---- 日志文件 ----
+*.log
+/tmp/
+
+# ---- 备份文件 ----
+*.backup
+backup/
+
+# ---- 本地配置 ----
+*.local
+local.mk
+
+# ---- 大源码树 (不跟踪, 仅跟踪修改文件) ----
+kernel/linux-4.9/
+openwrt/openwrt/
+buildroot/
+brandy/
+platform/
+tools/
+bsp/
+test/
