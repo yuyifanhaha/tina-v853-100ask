@@ -31,6 +31,9 @@ kernel/linux-4.9/arch/arm/boot/dts/*.dtb
 # ---- 预编译工具链 (太大) ----
 prebuilt/
 
+# ---- OpenWrt/Buildroot 元数据 ----
+openwrt/.openwrt_targets
+
 # ---- OpenWrt/Buildroot 构建产物 ----
 openwrt/openwrt/bin/
 openwrt/openwrt/build_dir/
@@ -99,6 +102,10 @@ local.mk
 # ---- 大源码树 (不跟踪, 仅跟踪修改文件) ----
 kernel/linux-4.9/
 openwrt/openwrt/
+openwrt/package/
+openwrt/target/
+openwrt/build/
+openwrt/dl/
 buildroot/
 brandy/
 platform/
